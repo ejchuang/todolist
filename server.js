@@ -100,7 +100,8 @@ const requestListener = (req,res) =>{
         }));
         res.end();
     }
-    
 }
 const server = http.createServer(requestListener);
-server.listen(3005);
+
+//修改服務環境設定
+server.listen(process.env.PORT || 3005);
